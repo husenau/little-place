@@ -9,4 +9,4 @@ function contact() {
   );
 }
 
-export default About;
+export default Contact;
