@@ -1,41 +1,61 @@
 html {
-  scroll-behavior: smooth; /* Enables smooth scrolling to sections */
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+  color: #fff;
 }
 
 .navbar {
-  position: sticky; /* Makes the nav bar stay at the top */
+  position: sticky;
   top: 0;
-  background-color: #f0f0f0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
 
 .navbar a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
 }
 
 section {
   padding: 4rem 2rem;
   text-align: center;
-  min-height: 80vh; /* Ensures each section takes up most of the viewport height */
+  min-height: 80vh;
 }
